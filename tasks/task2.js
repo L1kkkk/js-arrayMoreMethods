@@ -12,7 +12,14 @@ const products = [
 ];
 
 function getProductsNotInPriceRange(products) {
-  // Ваш код
+  const filteredProducts = [];
+  for (let i = 0; i < products.length; i++) {
+    if (products[i].price < 100 || products[i].price > 500) {
+      filteredProducts.push(products[i].name); 
+    }
+  }
+
+  return filteredProducts;
 }
 
 console.log(getProductsNotInPriceRange(products));
